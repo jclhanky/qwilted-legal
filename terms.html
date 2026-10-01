@@ -1,127 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Qwilted — Terms of Use</title>
+<meta name="color-scheme" content="light dark">
+<title>Qwilted Terms of Use</title>
+<meta name="description" content="The agreement for using Qwilted and Qwilted Plus: who can use it, your saves, Cloud AI, Plus and billing, and your rights.">
+<link rel="canonical" href="https://qwilted.app/terms">
 <style>
-  :root { --accent:#5B5BD6; --ink:#222; --muted:#6b6b76; --line:#ececf1; --bg:#ffffff; }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.62; -webkit-font-smoothing:antialiased; }
-  .wrap { max-width:760px; margin:0 auto; padding:56px 24px 96px; }
-  header.brand { display:flex; align-items:center; gap:10px; margin-bottom:40px; }
-  header.brand .dot { width:14px; height:14px; border-radius:4px; background:var(--accent); }
-  header.brand .name { font-weight:600; letter-spacing:.2px; }
-  header.brand a { margin-left:auto; color:var(--muted); text-decoration:none; font-size:14px; }
-  header.brand a:hover { color:var(--accent); }
-  h1 { font-size:30px; line-height:1.2; margin:0 0 6px; font-weight:650; letter-spacing:-.4px; }
-  .updated { color:var(--muted); font-size:14px; margin:0 0 36px; }
-  h2 { font-size:19px; margin:38px 0 10px; font-weight:620; letter-spacing:-.2px; }
-  p, li { color:#33333b; }
-  a { color:var(--accent); }
-  ul { padding-left:20px; }
-  li { margin:6px 0; }
-  .lead { font-size:17px; color:#3a3a44; }
-  hr { border:0; border-top:1px solid var(--line); margin:40px 0; }
-  footer { color:var(--muted); font-size:14px; margin-top:48px; }
+:root{
+  --bg:#FBF9F5; --surface:#FFFFFF; --ink:#1C1E22; --muted:#5A5E66; --line:#E3DED4;
+  --accent:#2F4B8A; --accent-ink:#253E73; --accent-soft:#EEF2FB; --th:#F4F1EA;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15171B; --surface:#1D2026; --ink:#ECEAE4; --muted:#A8ABB2; --line:#33373F;
+    --accent:#9DB4F0; --accent-ink:#B9CAF5; --accent-soft:#232B3D; --th:#23262D;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15171B; --surface:#1D2026; --ink:#ECEAE4; --muted:#A8ABB2; --line:#33373F;
+  --accent:#9DB4F0; --accent-ink:#B9CAF5; --accent-soft:#232B3D; --th:#23262D;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
+body{margin:0; background:var(--bg); color:var(--ink);
+  font:400 17px/1.55 -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, sans-serif;
+  overflow-wrap:anywhere}
+.page{max-width:760px; margin:0 auto; padding:24px 16px 56px}
+.brand{font:600 15px/1 ui-serif, "New York", Georgia, serif; letter-spacing:.02em; color:var(--accent); margin:0 0 20px}
+h1,h2,h3{font-family:ui-serif, "New York", Georgia, "Times New Roman", serif; line-height:1.2; color:var(--ink)}
+h1{font-size:34px; font-weight:600; margin:0 0 10px}
+h2{font-size:24px; font-weight:600; margin:44px 0 10px; padding-top:18px; border-top:1px solid var(--line); scroll-margin-top:16px}
+h3{font-size:19px; font-weight:600; margin:28px 0 6px; scroll-margin-top:16px}
+p{margin:0 0 12px}
+.lede{color:var(--muted)}
+ul{margin:0 0 14px; padding-left:22px}
+li{margin:0 0 7px}
+li ul{margin:8px 0 0}
+strong{font-weight:600}
+a{color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px}
+a:hover{color:var(--accent-ink)}
+nav.toc{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:14px 16px 6px; margin:22px 0 8px}
+nav.toc h2{font-size:16px; margin:0 0 8px; padding:0; border:0; font-family:inherit; color:var(--muted); font-weight:600}
+nav.toc ol{list-style:none; margin:0; padding:0; columns:2; column-gap:24px}
+nav.toc li{margin:0 0 8px; break-inside:avoid; font-size:15px}
+.table{margin:6px 0 18px; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:15px; line-height:1.45}
+th,td{text-align:left; vertical-align:top; padding:10px 12px; border-bottom:1px solid var(--line)}
+th{background:var(--th); font-weight:600}
+tbody tr:last-child td{border-bottom:0}
+footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:14px}
+@media (max-width:640px){
+  body{font-size:16px}
+  h1{font-size:29px}
+  h2{font-size:21px}
+  nav.toc ol{columns:1}
+  .table{border:0; background:transparent; overflow:visible}
+  table, thead, tbody, tr, td{display:block; width:100%}
+  thead{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)}
+  tr{background:var(--surface); border:1px solid var(--line); border-radius:12px; margin:0 0 10px; padding:6px 0}
+  td{border:0; padding:6px 14px}
+  td::before{content:attr(data-label); display:block; font-size:12px; font-weight:600; letter-spacing:.03em; text-transform:uppercase; color:var(--muted); margin-bottom:2px}
+}
+@media print{
+  body{background:#fff; color:#000}
+  nav.toc{display:none}
+  a{color:#000}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="brand">
-    <span class="dot"></span><span class="name">Qwilted</span>
-    <a href="privacy.html">Privacy Policy →</a>
-  </header>
-
-  <h1>Terms of Use</h1>
-  <p class="updated">Last updated: August 4, 2026</p>
-
-  <p class="lead">These Terms of Use (“Terms”) govern your use of the Qwilted app, operated by
-  Jacob Hanks (“Qwilted,” “we,” “us”). By using Qwilted, you agree to these Terms and to our
-  <a href="privacy.html">Privacy Policy</a>. If you do not agree, please do not use the app.</p>
-
-  <h2>1. Eligibility</h2>
-  <p>You must be at least <strong>13 years old</strong> to use Qwilted. If you are under the age of
-  legal majority where you live, you may use Qwilted only with the involvement and consent of a
-  parent or guardian who agrees to these Terms on your behalf.</p>
-
-  <h2>2. The service</h2>
-  <p>Qwilted lets you save links, short-form videos, and notes and organize them into collections,
-  with optional AI-assisted summaries and suggestions. Features may change, and we may add, modify,
-  or discontinue parts of the app over time.</p>
-
-  <h2>3. Your account</h2>
-  <p>You sign in using Sign in with Apple. You are responsible for activity that occurs under your
-  account and for keeping your device secure.</p>
-
-  <h2>4. Your content</h2>
-  <p>You retain ownership of the content you save and the notes you write. You grant Qwilted a
-  limited license to store and process that content solely to operate the app for you — including
-  sending it to our AI provider to generate summaries, tags, and suggestions. You are responsible
-  for the content you save and confirm you have the right to save and use it.</p>
-
-  <h2>5. Acceptable use</h2>
-  <ul>
-    <li>Do not use Qwilted for unlawful purposes or to store or share illegal content.</li>
-    <li>Do not infringe the intellectual property or privacy rights of others.</li>
-    <li>Do not attempt to disrupt, reverse-engineer, or gain unauthorized access to the service.</li>
-    <li>Do not use automated means to abuse or overload the service.</li>
-  </ul>
-
-  <h2>6. Third-party content</h2>
-  <p>Items you save link to third-party content that we do not control or endorse. We are not
-  responsible for third-party websites, services, or the content they provide.</p>
-
-  <h2>7. AI features</h2>
-  <p>AI-generated summaries, tags, and suggestions may be inaccurate or incomplete and are provided
-  for convenience only. They are not professional advice. Please verify anything important before
-  relying on it.</p>
-
-  <h2>8. Qwilted Plus subscriptions</h2>
-  <ul>
-    <li>Qwilted includes a free tier with a limited number of AI actions per month and a paid,
-    auto-renewing subscription, <strong>Qwilted Plus</strong>, offered on a monthly or annual basis.</li>
-    <li>The current price is shown in the app at the time of purchase (for example, $2.99 per month
-    or $24.99 per year). Prices may vary by region and may change.</li>
-    <li>Payment is charged to your Apple Account at confirmation of purchase.</li>
-    <li>Subscriptions automatically renew unless canceled at least 24 hours before the end of the
-    current period. Your Apple Account is charged for renewal within 24 hours before the period ends.</li>
-    <li>You can manage or cancel your subscription anytime in your Apple Account settings. Deleting
-    the app does not cancel a subscription.</li>
-    <li>Refunds are handled by Apple under the Apple Media Services Terms; we generally cannot issue
-    refunds directly.</li>
-    <li>Paid features are also subject to Apple’s Standard End User License Agreement:
-    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">apple.com/legal/internet-services/itunes/dev/stdeula</a>.</li>
-  </ul>
-
-  <h2>9. Disclaimers</h2>
-  <p>Qwilted is provided on an “as is” and “as available” basis, without warranties of any kind,
-  whether express or implied, to the fullest extent permitted by law.</p>
-
-  <h2>10. Limitation of liability</h2>
-  <p>To the fullest extent permitted by law, Qwilted and its operator will not be liable for any
-  indirect, incidental, special, or consequential damages, or for any loss of data, arising out of
-  or related to your use of the app.</p>
-
-  <h2>11. Termination</h2>
-  <p>You may stop using Qwilted and delete your account at any time. We may suspend or terminate
-  access if you violate these Terms or where necessary to comply with law.</p>
-
-  <h2>12. Changes to these Terms</h2>
-  <p>We may update these Terms from time to time. Your continued use of Qwilted after changes take
-  effect means you accept the updated Terms.</p>
-
-  <h2>13. Governing law</h2>
-  <p>These Terms are governed by the laws of the United States and of the State in which the
-  operator is primarily resident, without regard to conflict-of-laws principles.</p>
-
-  <hr>
-  <h2>Contact</h2>
-  <p>Questions about these Terms? Email <a href="mailto:support@qwilted.app">support@qwilted.app</a>.</p>
-
-  <footer>© 2026 Qwilted · Operated by Jacob Hanks</footer>
-</div>
+<main class="page">
+<p class="brand">Qwilted</p>
+<h1>Qwilted Terms of Use</h1>
+<p class="lede"><strong>Last updated: October 1, 2026.</strong> These terms take effect on that date. What changed since the last version is listed at the end.</p>
+<nav class="toc" aria-label="Contents"><h2>Contents</h2><ol><li><a href="#s1">1. The short version</a></li><li><a href="#s2">2. Who we are and what these terms cover</a></li><li><a href="#s3">3. Agreeing to these terms</a></li><li><a href="#s4">4. Who can use Qwilted</a></li><li><a href="#s5">5. Your licence to use Qwilted</a></li><li><a href="#s6">6. Apple and the App Store</a></li><li><a href="#s7">7. Your saves and your content</a></li><li><a href="#s8">8. Content from other apps and websites, and copyright</a></li><li><a href="#s9">9. Rules for using Qwilted</a></li><li><a href="#s10">10. Stitch and Cloud AI</a></li><li><a href="#s11">11. The free plan and your Qwilt</a></li><li><a href="#s12">12. Plus, the free trial and billing</a></li><li><a href="#s13">13. Your library, backups and data loss</a></li><li><a href="#s14">14. Test versions (TestFlight)</a></li><li><a href="#s15">15. Our property and your feedback</a></li><li><a href="#s16">16. Changes to Qwilted, suspension and ending</a></li><li><a href="#s17">17. Disclaimers</a></li><li><a href="#s18">18. Limitation of liability</a></li><li><a href="#s19">19. Indemnity</a></li><li><a href="#s20">20. Disputes and governing law</a></li><li><a href="#s21">21. General legal terms</a></li><li><a href="#s22">22. Changes to these terms</a></li><li><a href="#s23">23. Contact</a></li><li><a href="#changes">Changes since the version of August 4, 2026</a></li></ol></nav>
+<h2 id="s1">1. The short version</h2>
+<p>This is a summary to help you read the rest. The full terms below are what count.</p>
+<ul><li><strong>You must be 18 or older.</strong> Qwilted is for adults only.</li><li><strong>Your saves are yours.</strong> We use them only to run Qwilted for you.</li><li><strong>Your library lives on your phone.</strong> We don't keep a copy, so we can't get it back if your phone is lost. Export a backup.</li><li><strong>Cloud AI is your choice.</strong> It's off until you turn it on. When it's on, the pieces a note or an answer needs go through our server to Claude, an AI made by Anthropic.</li><li><strong>AI can be wrong.</strong> Check anything important. Stitch isn't a doctor, a lawyer or a financial adviser.</li><li><strong>Your Qwilt is free, forever.</strong> Plus is a paid subscription for more Cloud AI, billed by Apple. It renews until you cancel it in iPhone Settings, at least 24 hours before it renews.</li><li><strong>Play fair.</strong> Don't break the law, attack Qwilted or get around its limits.</li><li><strong>Something wrong?</strong> Email <a href="mailto:support@qwilted.app">support@qwilted.app</a> first. We'd rather fix it.</li></ul>
+<h2 id="s2">2. Who we are and what these terms cover</h2>
+<p>Qwilted is an iPhone app that saves the links, videos and posts you share from other apps, lets you find any of them again by asking, and arranges them on a board you can share. Stitch is the character in the app who answers your questions about your saves. Your board is called your Qwilt, and its patches are your collections.</p>
+<p>Qwilted is made and run by Jacob Hanks, an individual. It isn't a company. In these terms, "Qwilted", "we", "us" and "our" mean Jacob Hanks, and "you" means the person using Qwilted.</p>
+<p>These terms cover:</p>
+<ul><li>the Qwilted app, including the part of it that appears in other apps' Share menus;</li><li>the Qwilted server the app talks to;</li><li>Qwilted Plus ("Plus"), our paid subscription;</li><li>this website.</li></ul>
+<p>Words we use:</p>
+<ul><li><strong>Saves</strong> are the things you keep in Qwilted. <strong>Patches</strong> are the collections you sort them into. <strong>Your library</strong> is all of it: your saves, notes, patches, to-dos and your Qwilt.</li><li><strong>Cloud AI</strong> is the optional feature that sends pieces of your saves and questions through our server to Claude, an AI made by Anthropic, PBC, to write notes and answers.</li><li><strong>On your phone</strong> means work Qwilted does on your iPhone, without Cloud AI.</li></ul>
+<p>Our <a href="privacy.html">Privacy Policy</a> is part of these terms. It explains what information Qwilted uses, where it goes and the choices you have. Where these terms mention your information, the Privacy Policy has the details.</p>
+<h2 id="s3">3. Agreeing to these terms</h2>
+<p>These terms are a legal agreement between you and us.</p>
+<ul><li><strong>How you agree.</strong> Before setup ends, and before Qwilted opens your library, it asks how Stitch should read your saves. That card has a box, "I've read and agree to the Privacy Policy and Terms.", with a link to each. Continue stays off until you tick the box and make your choice. Ticking the box and tapping Continue is how you accept these terms.</li><li><strong>If you chose before the box existed,</strong> in an earlier version of Qwilted, you accept these terms by using Qwilted after they take effect. You can read them at any time in Settings › Privacy Policy · Terms of Use.</li><li><strong>If you don't agree,</strong> don't use Qwilted. You can delete the app at any time.</li><li><strong>Agreeing electronically.</strong> Ticking the box counts as signing. We may give you notices in the app, on this website, or by email if you've written to us.</li></ul>
+<h2 id="s4">4. Who can use Qwilted</h2>
+<ul><li><strong>You must be 18 or older.</strong> Qwilted is for adults only. If you're under 18, you may not use Qwilted, even with a parent's or guardian's permission.</li><li><strong>The age question.</strong> Setup asks about age on its second screen, before anything you make is saved. If your iPhone can, Apple asks whether to share your age range with Qwilted (Apple's Declared Age Range); otherwise you pick a range. If the answer is under 18, setup stops. By using Qwilted, you promise that you're 18 or older and that your answer was true.</li><li><strong>If you're under 18 and got past the age question,</strong> stop using Qwilted. Go to Settings › Delete account and data, which erases everything Qwilted keeps on your phone and asks our server to delete what the sharing switches sent, then delete the app. If you bought Plus, cancel it in iPhone Settings too, because deleting doesn't cancel it (section 12.4).</li><li><strong>If we learn someone under 18 is using Qwilted,</strong> we'll delete anything on our side that we can link to them, and ask them to stop. Their library is on their phone, where we can't reach it. A parent who believes their child has used Qwilted can email <a href="mailto:privacy@qwilted.app">privacy@qwilted.app</a>.</li><li><strong>Where Qwilted is offered.</strong> Qwilted and Plus are offered on the App Store in the United States and Canada only.</li><li><strong>Testers</strong> of versions that aren't released yet must also be 18 or older (section 14).</li></ul>
+<h2 id="s5">5. Your licence to use Qwilted</h2>
+<ul><li><strong>What you get.</strong> As long as you follow these terms, we give you a personal, limited, non-exclusive, non-transferable, revocable licence to use Qwilted on iPhones you own or control, for your own personal, non-commercial use, as Apple's App Store rules allow (section 6).</li><li><strong>What you don't get.</strong> Qwilted is licensed to you, not sold. We and our licensors keep every right these terms don't give you. You may not rent, lend, sell, sublicense or redistribute the app.</li><li><strong>Updates.</strong> The licence covers the updates we release. Some updates may be needed to keep using Cloud AI.</li><li><strong>Open-source parts.</strong> Qwilted includes open-source software, such as SwiftSoup, which is under the MIT License. Its own licence applies to that part.</li><li><strong>When the licence ends.</strong> It ends automatically if you break these terms, or when we end it under section 16. When it ends, stop using Qwilted and delete it.</li></ul>
+<h2 id="s6">6. Apple and the App Store</h2>
+<p>You get Qwilted from Apple's App Store, so Apple's rules apply too.</p>
+<ul><li><strong>Apple's licence agreement.</strong> Your use of the app is also covered by Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a> (the "Standard EULA"). These terms add to it. Where the two conflict, the Standard EULA wins.</li><li><strong>This agreement is with us, not Apple.</strong> These terms are between you and Jacob Hanks only, not Apple Inc. ("Apple"). We, not Apple, are solely responsible for Qwilted and its content.</li><li><strong>Maintenance and support.</strong> We, not Apple, are solely responsible for maintaining and supporting Qwilted. Apple has no obligation at all to provide maintenance or support for it. For help, email us (section 23).</li><li><strong>Warranty.</strong> If Qwilted fails to meet a warranty that applies, you may tell Apple, and Apple will refund the price you paid for the app, if any (Qwilted is free to download). To the extent the law allows, Apple has no other warranty obligation for Qwilted. Any other claims, losses or costs from a failure to meet a warranty are ours to handle, as far as these terms and the law make them anyone's.</li><li><strong>Product claims.</strong> We, not Apple, are responsible for handling any claims by you or anyone else about Qwilted or your having or using it, including product liability claims, claims that it fails to meet a legal or regulatory requirement, and claims under consumer protection, privacy or similar laws.</li><li><strong>Intellectual property claims.</strong> If anyone claims that Qwilted, or your having or using it, infringes their intellectual property rights, we, not Apple, are solely responsible for investigating, defending, settling and discharging that claim.</li><li><strong>Legal compliance.</strong> You promise that you aren't in a country that is subject to a US Government embargo or that the US Government has designated as a "terrorist supporting" country, and that you aren't on any US Government list of prohibited or restricted parties.</li><li><strong>Other terms.</strong> You must also follow any third-party terms that apply when you use Qwilted, such as your mobile carrier's. Qwilted uses mobile data, and your carrier may charge for it.</li><li><strong>Apple can enforce these terms.</strong> Apple and its subsidiaries are third-party beneficiaries of these terms. Once you accept them, Apple has the right (and will be treated as having accepted the right) to enforce them against you.</li><li><strong>Developer contact.</strong> Questions, complaints or claims about Qwilted go to Jacob Hanks at <a href="mailto:support@qwilted.app">support@qwilted.app</a>.</li></ul>
+<h2 id="s7">7. Your saves and your content</h2>
+<h3 id="s7-1">7.1 You own your saves</h3>
+<p>Anything you put into Qwilted stays yours, or stays with whoever owns it (section 8). That includes your saves, notes, patches, your Qwilt and the labels you write on it, your to-dos, the questions you ask Stitch and anything you tell him ("your content"). We don't claim ownership of any of it.</p>
+<h3 id="s7-2">7.2 The permission you give us</h3>
+<p>To run Qwilted, we need a limited permission to handle your content. You give us a worldwide, non-exclusive, royalty-free licence to store, copy, process, index and display your content, only as needed to:</p>
+<ul><li>run Qwilted for you on your phone;</li><li>if you turn on Cloud AI, send the pieces of your content described in <a href="privacy.html#s3-2">Privacy Policy section 3.2</a> through our server to Anthropic, which processes them for us as our service provider, to write notes, suggest patches and answer your questions, and send the results back to you;</li><li>if you turn on "Help improve Stitch", keep your questions and Stitch's answers for 12 months to find and fix wrong answers (<a href="privacy.html#s3-3">Privacy Policy section 3.3</a>);</li><li>keep Qwilted safe and working, and follow the law.</li></ul>
+<p>This licence doesn't let us sell your content, use it for advertising, publish it, or share it with anyone except as the Privacy Policy describes. Neither we nor Anthropic use your content to train AI models. The licence ends when you delete the content from Qwilted, or, for anything not yet sent, when you turn off Cloud AI or the switch. It can't recall what was already sent, which is kept only as the Privacy Policy describes.</p>
+<h3 id="s7-3">7.3 What AI writes for you</h3>
+<p>Notes, patch suggestions, to-dos and answers that Stitch or Cloud AI write for you ("outputs") are yours to use, as far as we have any rights in them. They aren't unique, may not be protected by copyright, and may repeat words from your saves. Using them outside Qwilted is your responsibility.</p>
+<h3 id="s7-4">7.4 Your responsibilities for your content</h3>
+<p>You're responsible for your content and for what you do with it. You promise that you have the right to save it and to let us process it as these terms describe, and that doing so doesn't break any law or anyone's rights.</p>
+<h3 id="s7-5">7.5 Sharing from Qwilted</h3>
+<p>You can share things out of Qwilted, such as a picture of your Qwilt, a patch's card or a backup file. You choose where it goes. Sharing goes straight from your phone, not through our server, and we don't control what happens to it afterwards. Don't share anything you don't have the right to share, or other people's private information without their permission.</p>
+<h2 id="s8">8. Content from other apps and websites, and copyright</h2>
+<h3 id="s8-1">8.1 Other people's content</h3>
+<p>Most things you save come from other apps and websites, such as YouTube, TikTok, Instagram, Reddit, Pinterest and Spotify. That content belongs to its creators or to those services, not to you or us.</p>
+<ul><li><strong>You're responsible for what you save.</strong> Qwilted is a tool for keeping things for your own personal use. Saving something doesn't give you any rights in it.</li><li><strong>Their terms still apply.</strong> Those services have their own terms, and you must follow them. Qwilted isn't made by, connected to or endorsed by any of them. Their names are trademarks of their owners.</li><li><strong>Link previews.</strong> To show a save's title and picture, your phone contacts the service the link came from (<a href="privacy.html#s3-6">Privacy Policy section 3.6</a>). A preview may stop working if the original is changed, deleted or made private.</li><li><strong>We don't check your saves.</strong> We don't review, approve or endorse anything you save, and we aren't responsible for it or for the sites behind your links.</li></ul>
+<h3 id="s8-2">8.2 Copyright complaints</h3>
+<p>We respect copyright and expect you to as well. Because your library lives on your phone, we don't host your saves and can't see or remove them. If you believe something that Qwilted itself publishes or sends infringes your copyright, email <a href="mailto:support@qwilted.app">support@qwilted.app</a> with:</p>
+<ul><li>your name and how to reach you;</li><li>a description of the copyrighted work you believe is infringed;</li><li>a description of the material you say infringes it, and where to find it;</li><li>a statement that you believe in good faith that the use isn't authorised by the owner, its agent or the law;</li><li>a statement that your notice is accurate and that you're the owner or authorised to act for the owner; and</li><li>your physical or electronic signature.</li></ul>
+<p>Sending a false notice can make you legally responsible for damages.</p>
+<h2 id="s9">9. Rules for using Qwilted</h2>
+<p>Use Qwilted fairly, lawfully and for your own personal use. You must not, and must not help anyone else to:</p>
+<ul><li>use Qwilted for anything illegal, or to save, create or share illegal content, including anything that sexually exploits children;</li><li>infringe anyone's copyright, trademark, privacy or other rights;</li><li>use Qwilted to harass, threaten, stalk or harm anyone, or to collect other people's personal information without their permission;</li><li>use Stitch or Cloud AI to create content that is hateful, violent extremist, sexually explicit involving minors, or meant to deceive, defame or harm people, or anything else that <a href="https://www.anthropic.com/legal/aup">Anthropic's Usage Policy</a> forbids, which applies to the AI behind Cloud AI;</li><li>try to trick Stitch or Cloud AI into ignoring its rules or safety limits, for example with "jailbreaks" or prompt injection;</li><li>get around or tamper with usage limits, the free weekly allowance, the free trial, our check that Plus is paid for, or any security feature, for example by resetting the app or faking what it sends;</li><li>use our server, the app's access key or Cloud AI outside the Qwilted app, or send so many requests that the service slows down or costs rise for everyone;</li><li>resell, share or give others access to Cloud AI through your copy of Qwilted;</li><li>copy or change the app, or reverse engineer, decompile or take apart the app or our server, except where the law allows this despite these terms;</li><li>scrape, crawl or use bots on the app or our server, or use the app to scrape other websites;</li><li>try to get into systems or data you're not allowed to reach, test for weaknesses without our written permission, or spread viruses or harmful code.</li></ul>
+<p><strong>Found a security problem?</strong> Please tell us at <a href="mailto:support@qwilted.app">support@qwilted.app</a> instead of testing it further. We won't take action against good-faith reports that follow this request.</p>
+<p>If you break these rules, we may limit or stop your use of Cloud AI and our server (section 16).</p>
+<h2 id="s10">10. Stitch and Cloud AI</h2>
+<h3 id="s10-1">10.1 Stitch is an AI</h3>
+<p>Stitch is an AI character built into Qwilted, not a person. His answers are written on your phone or, when Cloud AI is used, by Claude. Nobody at Qwilted reads your conversations with him, unless you turn on "Help improve Stitch" (<a href="privacy.html#s7">Privacy Policy sections 3.3 and 7</a>).</p>
+<h3 id="s10-2">10.2 AI can be wrong</h3>
+<p>Notes, summaries, patch suggestions, to-dos and answers are made by AI. They may be incomplete, out of date or simply wrong, even when they sound sure. AI can misread a video, mix up two saves, or state something that isn't true.</p>
+<ul><li><strong>Check before you rely on it.</strong> Look at the original save before acting on anything important.</li><li><strong>Not professional advice.</strong> Nothing Stitch or Cloud AI says is medical, mental health, legal, financial, tax or other professional advice. Don't use it in place of a qualified professional.</li><li><strong>Not for emergencies.</strong> If you or someone else is in danger, call 911. In the US and Canada you can call or text 988 to reach a suicide crisis line.</li><li><strong>Your decisions are yours.</strong> You're responsible for what you do with outputs.</li></ul>
+<h3 id="s10-3">10.3 Cloud AI is your choice</h3>
+<p>Cloud AI is off until you turn it on. Before your library opens, Qwilted asks you to choose Phone only or Use Cloud AI, and closing that card without choosing counts as Phone only. You can change your choice at any time in Settings › Cloud AI. What Cloud AI sends, where it goes and how long it's kept are in the <a href="privacy.html#s3-2">Privacy Policy, sections 3.2 and 5</a>.</p>
+<h3 id="s10-4">10.4 Anthropic</h3>
+<p>Cloud AI is run by Anthropic, PBC, which makes Claude. Anthropic processes what our server sends it on our behalf, as our service provider, under its commercial terms, and doesn't use it to train its models. Anthropic's rules for using its AI also apply to what you ask Cloud AI to do (section 9).</p>
+<h3 id="s10-5">10.5 Limits and availability</h3>
+<p>We can't promise that Cloud AI will always be available or always work the same way.</p>
+<ul><li><strong>It depends on others,</strong> including Anthropic, our hosting providers and your internet connection.</li><li><strong>Fair-use limits.</strong> Cloud AI has limits on every plan, to keep it fair and affordable. They're in sections 11 and 12. Our server also limits how much one person, one network and the whole service can use.</li><li><strong>We can pause it.</strong> We may pause Cloud AI for everyone, at any time and without notice, for example if costs spike, a provider has a problem, or we see abuse.</li><li><strong>We may change the AI model or provider.</strong> If that changes what happens to your information, we'll update the Privacy Policy first.</li></ul>
+<h3 id="s10-6">10.6 When Cloud AI isn't used, Qwilted says so</h3>
+<p>If Qwilted can't use Cloud AI for you, it keeps working on your phone and tells you. This happens when:</p>
+<ul><li>you chose Phone only, or haven't chosen Cloud AI yet;</li><li>you're offline;</li><li>your free weekly answers, your daily general-knowledge answers or your Plus month have run out;</li><li>the free trial has ended and you don't have Plus;</li><li>Cloud AI couldn't finish an answer, for example because it was paused or our server didn't respond.</li></ul>
+<p>An answer that came from your phone is marked "Answered on your phone", and Stitch says why, above the answer or when you ask him. A save that didn't get a Cloud AI note says so on its page. Answers and notes made on your phone may be shorter or less complete than Cloud AI's. Plus never steps down quietly: whenever an answer comes from your phone instead of Cloud AI, you're told.</p>
+<h3 id="s10-7">10.7 What Cloud AI already wrote stays</h3>
+<p>Losing Cloud AI stops new Cloud AI notes and answers. It never takes away notes Cloud AI already wrote on your saves. They stay as they are unless you edit or delete them, or a later Cloud AI read replaces them.</p>
+<h2 id="s11">11. The free plan and your Qwilt</h2>
+<p>Qwilted is free to download and use without Plus.</p>
+<ul><li><strong>Free for everyone:</strong> saving from other apps, finding your saves, sorting them into patches, to-dos and reminders, backups, and Stitch's answers on your phone.</li><li><strong>Your whole Qwilt is free, forever:</strong> arranging your patches, tying threads between them, writing labels on it, and sharing a picture of it or a patch's card. We won't move any of that behind Plus.</li><li><strong>Cloud AI on the free plan.</strong> Once the free trial is over, and if you've turned Cloud AI on, you get 5 Cloud AI answers a week, counted over a rolling 7 days. Answers from Stitch's general knowledge, rather than your saves, are also limited to 3 a day. Qwilted shows when your answers come back. Without Plus, new saves don't get a Cloud AI note.</li></ul>
+<p>We may change what the free plan includes (section 12.6), but the Qwilt stays free.</p>
+<h2 id="s12">12. Plus, the free trial and billing</h2>
+<h3 id="s12-1">12.1 What Plus includes</h3>
+<p>Plus is an auto-renewing subscription for more Cloud AI. <strong>Plus needs Cloud AI turned on:</strong> if you choose Phone only, Plus adds nothing until you turn Cloud AI on in Settings › Cloud AI. With Cloud AI on, Plus includes:</p>
+<ul><li>a Cloud AI note on every new save, which for a video can use what's said in it;</li><li>Cloud AI reading your older saves, one at a time, when you ask;</li><li>Cloud AI answers from Stitch for everyday use, including putting things together from your saves, such as a list or a plan.</li></ul>
+<p><strong>Plus isn't unlimited.</strong> It includes up to 200 uses of Cloud AI a month: each note on a save and each Cloud AI answer counts as one, and the count starts again on the 1st of each month. Answers from Stitch's general knowledge are limited to 25 a day. Our server also limits how much Cloud AI one subscription can use each day and each week. When you reach a limit, Qwilted answers on your phone and tells you (section 10.6).</p>
+<h3 id="s12-2">12.2 Prices</h3>
+<div class="table"><table><thead><tr><th scope="col">Plan</th><th scope="col">Price in the US</th></tr></thead><tbody><tr><td data-label="Plan">Yearly</td><td data-label="Price in the US">$39.99 a year</td></tr><tr><td data-label="Plan">Monthly</td><td data-label="Price in the US">$4.99 a month</td></tr><tr><td data-label="Plan">Weekly</td><td data-label="Price in the US">$1.49 a week</td></tr></tbody></table></div>
+<ul><li><strong>Apple shows the real price.</strong> The price Apple shows before you buy, in your currency and with any tax, is what you pay. In Canada, Apple charges in Canadian dollars.</li><li><strong>First-year offer.</strong> We may give out App Store offer codes for a first year of Plus at $24.99 in the US, for new subscribers. You redeem a code in the App Store, not in Qwilted. After that year, Plus renews at the regular yearly price unless you cancel. Each code's own terms are shown when you redeem it.</li></ul>
+<h3 id="s12-3">12.3 Apple handles payment</h3>
+<p>You buy Plus with your Apple Account through Apple's In-App Purchase. Apple charges you, not us, under Apple's <a href="https://www.apple.com/legal/internet-services/itunes/">Media Services Terms and Conditions</a>, which decide payment methods, taxes, receipts and failed or reversed payments. Payment is charged to your Apple Account when you confirm the purchase. We never see your card details.</p>
+<h3 id="s12-4">12.4 Automatic renewal and cancelling</h3>
+<ul><li><strong>Plus renews automatically</strong> for another week, month or year, unless you cancel. Your Apple Account is charged for the next period within 24 hours before the current one ends.</li><li><strong>Cancel at least 24 hours before it renews,</strong> in iPhone Settings › your name › Subscriptions › Qwilted. In Qwilted, the Manage button on the plan row in Settings takes you there.</li><li><strong>Deleting the app, or using Delete account and data, doesn't cancel Plus.</strong> Apple keeps billing it until you cancel.</li><li><strong>After you cancel,</strong> Plus stays on until the end of the period you've paid for, then you move to the free plan. We don't give partial refunds for the rest of a period.</li><li><strong>Switching plans.</strong> You can switch between yearly, monthly and weekly in the same place. Apple decides when the switch takes effect.</li><li><strong>Restore purchases.</strong> On a new phone or after reinstalling, tap Settings › Restore purchases to turn Plus back on.</li></ul>
+<h3 id="s12-5">12.5 The free trial</h3>
+<ul><li><strong>14 days, free, with no card.</strong> The trial starts with your first save, or your first Cloud AI answer if that comes first, and lasts 14 days. During it, with Cloud AI on, new saves get a Cloud AI note, Qwilted reads up to 25 of your older saves a day, and Stitch answers with Cloud AI.</li><li><strong>It's run by Qwilted, not Apple.</strong> It doesn't ask for payment details, and it never turns into a paid subscription by itself. When it ends, you move to the free plan unless you buy Plus.</li><li><strong>A reminder.</strong> If you allow notifications, Qwilted reminds you two days before the trial ends.</li><li><strong>One per iPhone.</strong> The trial's start date is kept in your iPhone's Keychain, so deleting the app, or using Delete account and data, doesn't start a new trial. Trying to get another one breaks section 9.</li><li><strong>Everything stays when it ends:</strong> your saves, your Qwilt and every note Cloud AI already wrote (section 10.7).</li><li>We may change or stop offering the free trial for new users.</li></ul>
+<h3 id="s12-6">12.6 Price and plan changes</h3>
+<ul><li><strong>Price changes.</strong> We may change Plus prices. Apple tells you before a higher price applies to your subscription and, where Apple's rules or the law require it, asks you to agree first. If you don't want the new price, cancel before it applies.</li><li><strong>What's included, and the limits.</strong> We may change what Plus and the free plan include, and the limits, as Qwilted and its costs change. If a change clearly makes Plus worse for current subscribers, we'll tell you in the app before it applies to your next renewal, so you can cancel. The Qwilt stays free (section 11).</li></ul>
+<h3 id="s12-7">12.7 Refunds</h3>
+<p>Apple handles all refunds. You can ask Apple for one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. We can't issue refunds ourselves, and Apple decides. Nothing in these terms limits any refund right you have under the law where you live.</p>
+<h2 id="s13">13. Your library, backups and data loss</h2>
+<p><strong>Please read this section.</strong> It's different from many apps.</p>
+<ul><li><strong>Your library lives on your phone.</strong> Qwilted has no sign-up and doesn't keep a copy of your library on its server. We can't see it, and we can't restore it for you.</li><li><strong>You can lose it.</strong> If your phone is lost, stolen, broken or erased, or you delete the app, your library may be gone for good unless you have a backup.</li><li><strong>Export a backup.</strong> Settings › Back up and restore saves your library as one file you can keep anywhere, and restores from it. Do this regularly. A backup file holds your saves, notes, to-dos, patches and their cover pictures, and your Qwilt, but not the photos and videos you added. It isn't encrypted, so anyone who gets the file can read it.</li><li><strong>Automatic backups stay on the same phone.</strong> When your library has changed, Qwilted keeps backups on your phone, at most one a day and the 3 newest. They won't help if the phone is lost or erased.</li><li><strong>iPhone backups.</strong> A backup of your whole iPhone to iCloud or a computer includes Qwilted's data, under Apple's terms.</li><li><strong>Recently Deleted.</strong> A save you delete stays in Recently Deleted for 30 days, where you can restore it. After that, or if you delete it from there, it's gone for good.</li><li><strong>Delete account and data</strong> in Settings erases everything Qwilted keeps on your phone (<a href="privacy.html#s9-2">Privacy Policy section 9.2</a>). It can't be undone.</li><li><strong>Software can fail.</strong> We work hard not to lose saves, but to the extent the law allows, we aren't responsible for lost or damaged content (sections 17 and 18). A backup you keep yourself is your best protection.</li></ul>
+<h2 id="s14">14. Test versions (TestFlight)</h2>
+<p>We may invite you to try versions of Qwilted that aren't released yet, through Apple's TestFlight.</p>
+<ul><li><strong>Testers must be 18 or older.</strong> We invite testers by email, in the US and Canada.</li><li><strong>Test versions are unfinished.</strong> They may crash, lose saves, change without notice or stop working. Back up anything you care about.</li><li><strong>Some things work differently.</strong> Plus bought in a test version is a test purchase, and Apple doesn't charge for it. Some limits differ too: for example, Plus's monthly count isn't applied.</li><li><strong>Apple's TestFlight terms</strong> also apply.</li></ul>
+<h2 id="s15">15. Our property and your feedback</h2>
+<ul><li><strong>Ours.</strong> Qwilted, Stitch (his name, look and character), the Qwilted name and logo, the app's design, text and code, and our server belong to us or our licensors and are protected by law. These terms don't give you any right to use them, except to use Qwilted as these terms allow.</li><li><strong>Your feedback.</strong> If you send us ideas, suggestions or feedback, you let us use them freely, without paying you or owing you anything. This doesn't cover your saves or other content (section 7), or what "Help improve Stitch" sends, which follows the Privacy Policy.</li></ul>
+<h2 id="s16">16. Changes to Qwilted, suspension and ending</h2>
+<h3 id="s16-1">16.1 We may change Qwilted</h3>
+<p>We may add, change or remove features, limits or providers. We'll try to tell you about big changes in the app first.</p>
+<h3 id="s16-2">16.2 We may stop Qwilted</h3>
+<p>We may stop offering Qwilted or Cloud AI. If we do, we'll try to give you at least 30 days' notice in the app, so you can export a backup and cancel Plus, and you can ask Apple for a refund of Plus time you've paid for. Because your library lives on your phone, the app may keep working there for a while, but we don't promise it will keep working with future versions of iOS.</p>
+<h3 id="s16-3">16.3 We may limit your access</h3>
+<p>We may limit, suspend or end your use of Cloud AI and our server, without notice, if you break these terms (especially section 9), if your use risks harm to other people, to Qwilted or to our providers, or if the law requires it. If you think we got it wrong, email us (section 23).</p>
+<h3 id="s16-4">16.4 You may stop at any time</h3>
+<p>You can stop using Qwilted whenever you like. Export a backup first if you want to keep your saves, use Settings › Delete account and data to erase what's on your phone, cancel Plus in iPhone Settings, and delete the app.</p>
+<h3 id="s16-5">16.5 What survives</h3>
+<p>If these terms end, the sections that by their nature should keep applying still do, including sections 7.4, 8, 13 and 15 to 21.</p>
+<h2 id="s17">17. Disclaimers</h2>
+<p>Please read this section carefully.</p>
+<ul><li><strong>As is.</strong> To the fullest extent the law allows, Qwilted, Stitch, Cloud AI and all outputs are provided "as is" and "as available", without warranties of any kind, express or implied. That includes implied warranties of merchantability, fitness for a particular purpose, title, non-infringement and accuracy.</li><li><strong>No promise that it's perfect.</strong> We don't promise that Qwilted or Cloud AI will always be available, uninterrupted, secure or free of errors, that outputs will be accurate, complete or useful, that link previews will keep working, or that your content will never be lost.</li><li><strong>Other people's services.</strong> We aren't responsible for other apps, websites or services, including the sites behind your saves, Apple's services and Anthropic's AI.</li><li><strong>Your rights under the law.</strong> Some laws, including consumer protection laws in some US states and in Canadian provinces such as Quebec, don't allow some of these disclaimers. Where such a law applies to you, these disclaimers apply only as far as it allows, and you keep every right it says can't be given up.</li></ul>
+<h2 id="s18">18. Limitation of liability</h2>
+<ul><li><strong>Kinds of loss.</strong> To the fullest extent the law allows, we won't be liable for any indirect, incidental, special, consequential, exemplary or punitive damages, or for lost data, content, profits, revenue or goodwill, arising from or related to Qwilted or these terms. This applies however the claim arises, including in contract or negligence, and even if we were told the loss was possible.</li><li><strong>The most we'll pay.</strong> To the fullest extent the law allows, our total liability for all claims about Qwilted or these terms is limited to the greater of what you paid for Plus in the 12 months before the event that led to the claim, and US$50.</li><li><strong>What this doesn't limit.</strong> Nothing in these terms limits liability that the law doesn't allow to be limited, such as liability for fraud, gross negligence, wilful misconduct, or death or personal injury caused by negligence.</li><li><strong>Where these limits don't apply.</strong> Some laws, including consumer protection laws in some US states and in Canadian provinces such as Quebec, don't allow some of these limits. Where such a law applies to you, they apply only as far as it allows.</li></ul>
+<h2 id="s19">19. Indemnity</h2>
+<p>To the extent the law allows, if someone brings a claim against us because of your content, because you broke these terms or the law, or because you infringed someone else's rights, you'll cover our reasonable costs of it, including reasonable lawyers' fees. This doesn't apply to claims caused by our own wrongdoing, or where the consumer protection law that applies to you doesn't allow it.</p>
+<h2 id="s20">20. Disputes and governing law</h2>
+<h3 id="s20-1">20.1 Talk to us first</h3>
+<p>Before starting a legal claim, please email <a href="mailto:support@qwilted.app">support@qwilted.app</a> with your name, how to reach you, what went wrong and what you'd like us to do. We'll both try in good faith to settle it within 30 days. You can still go to small claims court at any time.</p>
+<h3 id="s20-2">20.2 Which law applies</h3>
+<p>These terms, and any dispute about them or Qwilted, are governed by the laws of the US state or Canadian province where you live, and by the federal laws of the United States or Canada that apply there.</p>
+<h3 id="s20-3">20.3 Where disputes are decided</h3>
+<p>You may bring a claim in the courts where you live, including small claims court. If we ever need to bring a claim against you, we'll bring it there too. Nothing in these terms asks you to use arbitration, or takes away any right your law gives you to go to court, to a jury trial, or to take part in a class action.</p>
+<h2 id="s21">21. General legal terms</h2>
+<ul><li><strong>Entire agreement.</strong> These terms, the Privacy Policy, Apple's Standard EULA and any terms shown when you redeem an offer are the whole agreement between you and us about Qwilted. They replace any earlier terms, including the terms dated August 4, 2026.</li><li><strong>If a part doesn't hold up.</strong> If a court finds any part of these terms can't be enforced, that part is changed only as much as needed to make it enforceable, or removed, and the rest stays in effect.</li><li><strong>No waiver.</strong> If we don't enforce part of these terms straight away, we can still enforce it later.</li><li><strong>Assignment.</strong> You can't transfer these terms or your rights under them to anyone else. We may transfer them, for example to a company Jacob forms to run Qwilted, or as part of a sale or merger, as long as the new owner takes on our duties to you. We'll tell you if that happens.</li><li><strong>Third parties.</strong> Apple is a third-party beneficiary of these terms (section 6). Nobody else is.</li><li><strong>Events beyond our control.</strong> We aren't responsible for delays or failures caused by things outside our reasonable control, such as outages at Apple, Anthropic, our hosts or internet providers, natural disasters, war or changes in law.</li><li><strong>Notices.</strong> We give you notices in the app, on this website, or by email if you've written to us. You give notices to us by email (section 23).</li><li><strong>Headings.</strong> Headings and the short version in section 1 help you read. They don't change what a section means.</li><li><strong>California users.</strong> Under California Civil Code section 1789.3, you can report complaints to the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs, in writing at 1625 North Market Blvd., Suite N 112, Sacramento, CA 95834, or by phone at (800) 952-5210.</li></ul>
+<h2 id="s22">22. Changes to these terms</h2>
+<p>We may update these terms when Qwilted, the law or our business changes, and the "Last updated" date at the top will change each time.</p>
+<ul><li><strong>Big changes come with notice.</strong> If a change is material, such as a new fee, a new limit on what you can do, or a change to how disputes are handled, we'll tell you in the app at least 30 days before it takes effect, unless the change has to happen sooner for legal or safety reasons.</li><li><strong>Keeping using Qwilted</strong> after a change takes effect means you accept it. If you don't, stop using Qwilted and cancel Plus (section 12.4).</li><li><strong>No going backwards.</strong> A change doesn't apply to a dispute that started before the change took effect.</li><li><strong>Earlier versions.</strong> What changed in this version is listed below, and earlier versions are available by email.</li></ul>
+<h2 id="s23">23. Contact</h2>
+<p>Email is the way to reach us. We don't have a public postal address.</p>
+<ul><li><strong>Help with Qwilted, these terms, copyright or security:</strong> <a href="mailto:support@qwilted.app">support@qwilted.app</a>. Settings › Contact support opens an email to it.</li><li><strong>Privacy questions and requests:</strong> <a href="mailto:privacy@qwilted.app">privacy@qwilted.app</a>.</li></ul>
+<h2 id="changes">Changes since the version of August 4, 2026</h2>
+<p>The previous terms were out of date in several places. This version was rewritten from what the app does today.</p>
+<ul><li><strong>Age: 18 and older, not 13.</strong> The old terms let anyone 13 or older use Qwilted, with a parent's consent under the age of majority. Qwilted is now for adults only, and setup asks about age first (section 4).</li><li><strong>No accounts.</strong> The old terms described signing in with Apple. Qwilted has no sign-up (sections 2 and 13).</li><li><strong>How you agree.</strong> You now agree by ticking a box before Qwilted opens your library, not only by using it (section 3).</li><li><strong>Prices.</strong> Plus is $39.99 a year, $4.99 a month or $1.49 a week, not $2.99 a month or $24.99 a year, with a $24.99 first year through App Store offer codes (section 12.2).</li><li><strong>The free plan, the free trial and the limits</strong> are stated with their real numbers. The old terms said the free plan had "a limited number of AI actions per month" (sections 11 and 12).</li><li><strong>Your Qwilt is free, forever</strong> (section 11).</li><li><strong>Cloud AI is your choice, and Anthropic is named</strong> (sections 7.2 and 10).</li><li><strong>When Cloud AI isn't used, you're told</strong> (section 10.6).</li><li><strong>Where Qwilted is offered:</strong> the United States and Canada (section 4).</li><li><strong>New sections:</strong> Apple's terms (6), copyright complaints (8.2), backups and data loss (13), test versions (14), a limit of liability in numbers (18) and how disputes are handled (20).</li><li><strong>Governing law</strong> is now the law where you live, instead of "the State in which the operator is primarily resident" (section 20).</li><li><strong>Changes to these terms.</strong> Material changes now come with 30 days' notice in the app (section 22).</li><li><strong>Contact is email only:</strong> <a href="mailto:support@qwilted.app">support@qwilted.app</a> and <a href="mailto:privacy@qwilted.app">privacy@qwilted.app</a> (section 23).</li><li><strong>New address.</strong> These terms now live at qwilted.app/terms.</li></ul>
+<footer>Qwilted · <a href="privacy.html">Privacy Policy</a> · <a href="mailto:support@qwilted.app">support@qwilted.app</a> · <a href="mailto:privacy@qwilted.app">privacy@qwilted.app</a></footer>
+</main>
 </body>
 </html>
